@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="Messages for this Actor" Type="Folder">
 		<Item Name="Read Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/Read Msg/Read Msg.lvclass"/>
+		<Item Name="UpdateImage Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/UpadteImage Msg/UpdateImage Msg.lvclass"/>
 		<Item Name="WaitListener Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/WaitListener Msg/WaitListener Msg.lvclass"/>
 		<Item Name="Write Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/Write Msg/Write Msg.lvclass"/>
 	</Item>

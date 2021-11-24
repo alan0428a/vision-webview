@@ -18,20 +18,49 @@ function connect(){
 		
 		// Display the received message
 		socket.onmessage = function(msg){  
-			message('<p class="message">Received: '+msg.data);  
+			// message('<p class="message">Received: '+msg.data);  
 			
-			var text = "";
-			var msg = JSON.parse(msg.data);
-			var time = new Date(msg.date);
-			var timeStr = time.toLocaleTimeString();
+			var data = JSON.parse(msg.data);
 
-			switch(msg.type) {
-				case "image":                    
-					var imageElement = document.getElementById("display")
-					imageElement.src = "data:image/png;base64,"+msg.data
+			switch(data.type) {
+				case "images":
+					var content = data.content
+					if(content.source != "")
+					{
+						$('#img-source').attr("src","data:image/png;base64,"+ content.source)
+					}
+					for (let index = 0; index < content.rois.length; index++) {
+						let imgElementName = `#img-defect-${index + 1}`
+						$(imgElementName).attr("src","data:image/png;base64,"+ content.rois[index])
+					}
+
+					for (let index = 0; index < content.results.length; index++) {
+						let wrapperElementName = `#img-wrapper-defect-${index + 1}`
+						let wrapperElement = $(wrapperElementName)
+						let result = content.results[index]
+						if(result)
+						{
+							if(wrapperElement.hasClass("ng"))
+							{
+								wrapperElement.removeClass("ng")
+							}
+							wrapperElement.addClass("ok")
+						}
+						else
+						{
+							if(wrapperElement.hasClass("ok"))
+							{
+								wrapperElement.removeClass("ok")
+							}
+							wrapperElement.addClass("ng")
+						}
+						
+					}
+					
+					break;
 				default:
 					console.info(msg.type + ": " + msg.data)
-				break;
+					break;
 			}
 
 		}  

@@ -15,39 +15,43 @@
 
 </head>
 <body>
-	<div class="card text-dark bg-light position-absolute top-50 start-50 translate-middle shadow-lg main-content">
-		<div class="card-body">
-			<div class="container">
-				<div class="row" style="height: 350px;">
-					<div class="col-4 bg-success d-flex align-items-center justify-content-center">
-						<p>main pic</p>
-					</div>
-					<div class="col-8 bg-warning">
-						<div class="row" style="height: 175px;">
-							<div class="col-3 d-flex align-items-center justify-content-center">
-								<div class="flex-item">defect 1</div>
-							</div>
-							<div class="col-3 d-flex align-items-center justify-content-center bg-light">
-								<p>defect 2</p>
-							</div>
-							<div class="col-3 d-flex align-items-center justify-content-center bg-light">
-								<p>defect 3</p>
-							</div>
-							<div class="col-3 d-flex align-items-center justify-content-center bg-light">
-								<p>defect 4</p>
-							</div>
-						</row>
-						<div class="row">
-
-						</row>
-					</div>
-				</div>
-				<div class="row">
-
-				</div>
-			</div>
+	<div class="card text-dark bg-light shadow rounded main-content position-absolute top-50 start-50 translate-middle">
+		<div class="card-header fw-bold">
+		  High Speed AI Inspection
 		</div>
-	</div>
+		<div class="card-body d-flex flex-column">    
+		  <div class="h-100 p-2 d-flex flex-row">
+			<div class="border border-dark main-pic-region m-2 d-flex align-items-center justify-content-center">
+			  <img id="img-source"/>
+			</div>
+			<div class="border border-dark defect-pics-region m-2 d-flex flex-column">
+			  <div class="h-100 d-flex flex-row">
+				<div id="img-wrapper-defect-1" class="defect-pic d-flex align-items-center justify-content-center flex-fill m-2">
+					<img id="img-defect-1"/>
+				</div>
+				<div id="img-wrapper-defect-2" class="defect-pic d-flex align-items-center justify-content-center flex-fill m-2">
+					<img id="img-defect-2"/>
+				</div>
+				<div id="img-wrapper-defect-3" class="defect-pic d-flex align-items-center justify-content-center flex-fill m-2">
+					<img id="img-defect-3"/>
+				</div>
+			  </div>
+			  <div class="h-100 d-flex flex-row">
+				<div id="img-wrapper-defect-4" class="defect-pic d-flex align-items-center justify-content-center flex-fill m-2">
+					<img id="img-defect-4"/>
+				</div>
+				<div id="img-wrapper-defect-5" class="defect-pic d-flex align-items-center justify-content-center flex-fill m-2 ng">
+					<img id="img-defect-5"/>
+				</div>
+				<div id="img-wrapper-defect-6" class="defect-pic d-flex align-items-center justify-content-center flex-fill m-2 ok">
+					<img id="img-defect-6"/>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="p-2 h-100 bg-info">Flex item 2</div>
+		</div>
+	  </div>
 
 	<input id="send-msg">
 	<input type="button" value="Send Command" onclick="send()">

@@ -4,12 +4,8 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">553680896</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="Messages for this Actor" Type="Folder">
-		<Item Name="CapturedImage Msg.lvclass" Type="LVClass" URL="../Vision Messages/CapturedImage Msg/CapturedImage Msg.lvclass"/>
-		<Item Name="Load Msg.lvclass" Type="LVClass" URL="../Vision Messages/Load Msg/Load Msg.lvclass"/>
-		<Item Name="Save Msg.lvclass" Type="LVClass" URL="../Vision Messages/Save Msg/Save Msg.lvclass"/>
-		<Item Name="SelectCam Msg.lvclass" Type="LVClass" URL="../Vision Messages/SelectCam Msg/SelectCam Msg.lvclass"/>
-		<Item Name="SetROI Msg.lvclass" Type="LVClass" URL="../Vision Messages/SetROI Msg/SetROI Msg.lvclass"/>
-		<Item Name="Snap Msg.lvclass" Type="LVClass" URL="../Vision Messages/Snap Msg/Snap Msg.lvclass"/>
+		<Item Name="Load Msg.lvclass" Type="LVClass" URL="../TopLevel Messages/Load Msg/Load Msg.lvclass"/>
+		<Item Name="ReceiveCapturedImage Msg.lvclass" Type="LVClass" URL="../TopLevel Messages/ReceiveCapturedImage Msg/ReceiveCapturedImage Msg.lvclass"/>
 	</Item>
-	<Item Name="Vision.lvclass" Type="LVClass" URL="../Vision/Vision.lvclass"/>
+	<Item Name="TopLevel.lvclass" Type="LVClass" URL="../TopLevel/TopLevel.lvclass"/>
 </Library>

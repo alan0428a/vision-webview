@@ -1,20 +1,31 @@
-.main-content
-{
-    width: 1200px;
-    height: 700px;
-    border-radius: 25px;
-}
-
-.flex-item {
-    background: tomato;
-    padding: 5px;
-    width: 120px;
-    height: 120px;
-    margin: 5px;
-    
-    line-height: 100px;
-    color: white;
-    font-weight: bold;
-    font-size: 1em;
-    text-align: center;
+.main-content{
+    height: 900px;
+    width: 1200px; 
   }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+}
+  
+  .main-pic-region{
+    width: 40%;
+    background-color: #E0E0E0
+  }
+  .defect-pics-region{
+    width: 60%
+  }
+  
+  .defect-pic{
+    background-color: #F5BCBC
+  }
+  
+  .ok{
+    border: solid green;
+  }
+  
+  .ng
+  {
+    border: dashed red;
+  }
+  
