@@ -12,10 +12,21 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Actors" Type="Folder">
+			<Item Name="AI Inference" Type="Folder">
+				<Item Name="Inference.lvlib" Type="Library" URL="../Actors/AI Inference/Inference/Inference.lvlib"/>
+				<Item Name="InferenceMock.lvlib" Type="Library" URL="../Actors/AI Inference/InferenceMock/InferenceMock.lvlib"/>
+				<Item Name="InferenceTCP.lvlib" Type="Library" URL="../Actors/AI Inference/InferenceTCP/InferenceTCP.lvlib"/>
+			</Item>
 			<Item Name="TopLevel.lvlib" Type="Library" URL="../Actors/TopLevel/TopLevel.lvlib"/>
 			<Item Name="WebSocket.lvlib" Type="Library" URL="../Actors/WebSocket/WebSocket.lvlib"/>
 			<Item Name="Vision.lvlib" Type="Library" URL="../Actors/Vision/Vision.lvlib"/>
 			<Item Name="VisionUI.lvlib" Type="Library" URL="../Actors/VisionUI/VisionUI.lvlib"/>
+		</Item>
+		<Item Name="Models" Type="Folder">
+			<Item Name="ImagesModel.ctl" Type="VI" URL="../Models/ImagesModel.ctl"/>
+			<Item Name="InferenceDataModel.ctl" Type="VI" URL="../Models/InferenceDataModel.ctl"/>
+			<Item Name="InferenceResultsModel.ctl" Type="VI" URL="../Models/InferenceResultsModel.ctl"/>
+			<Item Name="ImageResultModel.ctl" Type="VI" URL="../Models/ImageResultModel.ctl"/>
 		</Item>
 		<Item Name="Launcher.vi" Type="VI" URL="../Launcher.vi"/>
 		<Item Name="TestWebsocket.vi" Type="VI" URL="../TestWebsocket.vi"/>
@@ -94,6 +105,7 @@
 				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
 				<Item Name="IMAQ Overlay Rectangle" Type="VI" URL="/&lt;vilib&gt;/vision/Overlay.llb/IMAQ Overlay Rectangle"/>
 				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
+				<Item Name="LVMapReplaceAction.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVMapReplaceAction.ctl"/>
 			</Item>
 			<Item Name="AF Debug.lvlib" Type="Library" URL="/&lt;resource&gt;/AFDebug/AF Debug.lvlib"/>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>

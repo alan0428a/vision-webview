@@ -23,6 +23,14 @@ function connect(){
 			var data = JSON.parse(msg.data);
 
 			switch(data.type) {
+				case "latest":
+					var imgResult = data.imageResults[0]
+					setImage('#img-source', imgResult.image)
+					setBoarder('#img-wrapper-source', imgResult.pass)
+				case "history":
+					var content = data.content
+					setImage('#img-source', content.source)
+					setBoarder('#img-source', content.pass)
 				case "images":
 					var content = data.content
 					if(content.source != "")
@@ -98,7 +106,31 @@ function send(){
 function message(msg){  
 	// $('#chatLog').append(msg+'</p>');  
 	console.info(msg)
-}  
+}
+
+function setBoarder(elementName, result){
+	let wrapperElement = $(elementName)
+	if(result)
+	{
+		if(wrapperElement.hasClass("ng"))
+		{
+			wrapperElement.removeClass("ng")
+		}
+		wrapperElement.addClass("ok")
+	}
+	else
+	{
+		if(wrapperElement.hasClass("ok"))
+		{
+			wrapperElement.removeClass("ok")
+		}
+		wrapperElement.addClass("ng")
+	}
+}
+
+function setImage(elementName, image){
+	$(elementName).attr("src","data:image/png;base64,"+ image)
+}
 
 $('#text').keypress(function(event) {  
 	if (event.keyCode == '13') {  
