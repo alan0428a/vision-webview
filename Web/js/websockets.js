@@ -27,44 +27,14 @@ function connect(){
 					var imgResult = data.imageResults[0]
 					setImage('#img-source', imgResult.image)
 					setBoarder('#img-wrapper-source', imgResult.pass)
+					break;
 				case "history":
-					var content = data.content
-					setImage('#img-source', content.source)
-					setBoarder('#img-source', content.pass)
-				case "images":
-					var content = data.content
-					if(content.source != "")
-					{
-						$('#img-source').attr("src","data:image/png;base64,"+ content.source)
-					}
-					for (let index = 0; index < content.rois.length; index++) {
+					for (let index = 0; index < data.imageResults.length; index++) {
 						let imgElementName = `#img-defect-${index + 1}`
-						$(imgElementName).attr("src","data:image/png;base64,"+ content.rois[index])
-					}
-
-					for (let index = 0; index < content.results.length; index++) {
 						let wrapperElementName = `#img-wrapper-defect-${index + 1}`
-						let wrapperElement = $(wrapperElementName)
-						let result = content.results[index]
-						if(result)
-						{
-							if(wrapperElement.hasClass("ng"))
-							{
-								wrapperElement.removeClass("ng")
-							}
-							wrapperElement.addClass("ok")
-						}
-						else
-						{
-							if(wrapperElement.hasClass("ok"))
-							{
-								wrapperElement.removeClass("ok")
-							}
-							wrapperElement.addClass("ng")
-						}
-						
+						setImage(imgElementName, data.imageResults[index].image)
+						setBoarder(wrapperElementName, data.imageResults[index].pass)
 					}
-					
 					break;
 				default:
 					console.info(msg.type + ": " + msg.data)

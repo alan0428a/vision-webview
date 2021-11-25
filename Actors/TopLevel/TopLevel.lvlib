@@ -7,6 +7,7 @@
 		<Item Name="Load Msg.lvclass" Type="LVClass" URL="../TopLevel Messages/Load Msg/Load Msg.lvclass"/>
 		<Item Name="ReceiveCapturedImage Msg.lvclass" Type="LVClass" URL="../TopLevel Messages/ReceiveCapturedImage Msg/ReceiveCapturedImage Msg.lvclass"/>
 		<Item Name="ReceiveInferenceResults Msg.lvclass" Type="LVClass" URL="../TopLevel Messages/ReceiveInferenceResults Msg/ReceiveInferenceResults Msg.lvclass"/>
+		<Item Name="SendHistoryResults Msg.lvclass" Type="LVClass" URL="../TopLevel Messages/SendHistoryResults Msg/SendHistoryResults Msg.lvclass"/>
 	</Item>
 	<Item Name="TopLevel.lvclass" Type="LVClass" URL="../TopLevel/TopLevel.lvclass"/>
 </Library>
