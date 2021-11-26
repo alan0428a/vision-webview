@@ -7,6 +7,7 @@
 		<Item Name="Read Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/Read Msg/Read Msg.lvclass"/>
 		<Item Name="UpdateHistory Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/UpdateHistory Msg/UpdateHistory Msg.lvclass"/>
 		<Item Name="UpdateImage Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/UpadteImage Msg/UpdateImage Msg.lvclass"/>
+		<Item Name="UpdateStatistics Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/UpdateStatistics Msg/UpdateStatistics Msg.lvclass"/>
 		<Item Name="WaitListener Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/WaitListener Msg/WaitListener Msg.lvclass"/>
 		<Item Name="Write Msg.lvclass" Type="LVClass" URL="../WebSocket Messages/Write Msg/Write Msg.lvclass"/>
 	</Item>
