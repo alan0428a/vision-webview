@@ -7,6 +7,8 @@ function connect(){
 	
 	// The LabVIEW demo uses port 6123, but this can be changed to any port. Change 'localhost' if connecting to a server running on another IP address.
 	var host = "ws://localhost:6123";  
+	$("#socket-status").html("Disconnected")
+	$("#socket-status").css('color', 'red')
 
 	try{  
 		socket = new WebSocket(host);  
@@ -15,6 +17,8 @@ function connect(){
 		
 		// Tell the user the connection has been established
 		socket.onopen = function(){  
+			$("#socket-status").html("Connected")
+    		$("#socket-status").css('color', 'green')
 			message('Socket Status: '+socket.readyState+' (open)');  
 		}  
 		
@@ -67,11 +71,16 @@ function connect(){
 		
 		// Tell the user the connection has been closed
 		socket.onclose = function(){  
-			message('Socket Status: '+socket.readyState+' (Closed)');  
+			message('Socket Status: '+socket.readyState+' (Closed)'); 
+			$("#socket-status").html("Disconnected")
+    		$("#socket-status").css('color', 'red')
 		}           
+		socket.onerror = function(){
+			message('Socket Status: '+socket.readyState+' (Error)'); 
+		}
 
 	} catch(exception){  
-		message('Error'+exception);  
+		console.error(exception);  
 	}
 }
 

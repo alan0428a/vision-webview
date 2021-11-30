@@ -5,6 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Abstract Messages for Caller" Type="Folder"/>
-	<Item Name="Messages for this Actor" Type="Folder"/>
+	<Item Name="Messages for this Actor" Type="Folder">
+		<Item Name="Connect Msg.lvclass" Type="LVClass" URL="../InferenceTCP Messages/Connect Msg/Connect Msg.lvclass"/>
+	</Item>
 	<Item Name="InferenceTCP.lvclass" Type="LVClass" URL="../InferenceTCP/InferenceTCP.lvclass"/>
 </Library>
