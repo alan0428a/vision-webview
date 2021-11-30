@@ -29,7 +29,6 @@
 			<Item Name="ImageResultModel.ctl" Type="VI" URL="../Models/ImageResultModel.ctl"/>
 		</Item>
 		<Item Name="Launcher.vi" Type="VI" URL="../Launcher.vi"/>
-		<Item Name="TestWebsocket.vi" Type="VI" URL="../TestWebsocket.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Actor Framework.lvlib" Type="Library" URL="/&lt;vilib&gt;/ActorFramework/Actor Framework.lvlib"/>
