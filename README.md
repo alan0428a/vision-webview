@@ -4,4 +4,4 @@ The UI is pure html and using websockets to update real-time results.
 
 The whole architecture is powered by <strong>Actor Framework</strong>!
 
-![UI Dashboard](https://github.com/alan0428a/vision-webview/tree/main/doc/ui.png)
+![UI Dashboard](https://github.com/alan0428a/vision-webview/blob/main/doc/ui.png)
