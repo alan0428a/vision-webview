@@ -29,6 +29,9 @@ function connect(){
 					var imgResult = data.imageResults[0]
 					setImage('#img-source', imgResult.image)
 					setBoarder('#img-wrapper-source', imgResult.pass)
+					$('#inference-time').html(data.ct.toFixed(2))
+					$('#uph').html(data.uph.toFixed(0))
+
 					if(prevTime == null)
 					{
 						prevTime = Date.now();
@@ -51,7 +54,9 @@ function connect(){
 					break;
 				case "statistics":
 					updateChart(data.count.ok, data.count.ng)
-					$('#ok-count').text(data.count.ok)
+					$('#ok-vol').html(data.count.ok)
+					$('#ng-vol').html(data.count.ng)
+					$('#area1-yield').html(data.count.yield.toFixed(2))
 					break;
 				default:
 					console.info(msg.type + ": " + msg.data)

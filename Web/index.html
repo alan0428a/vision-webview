@@ -12,7 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-<title>WebSockets Client</title>
+<title>High Speed AI Inspection</title>
 
 </head>
 <body>
@@ -56,25 +56,51 @@
 			  </div>
 			</div>
 		  </div>
-		  <div class="p-2 h-100">
+		  <div class="p-2 h-100 statistics-section">
 			  <div class="row">
 				  <div class="col-5 d-flex align-items-stretch">
 					  <canvas id="myChart" style="max-height: 250px;">
 					  </canvas>
 				  </div>
-				  <div class="col-3 d-flex flex-column align-items-center justify-content-evenly">
-					  <p id="ok-count">Hello World</p>
-					  <p>Inference time: xxx ms</p>
-					  <p>UPH: xxx pcs/h</p>
-				</div>
-					<div class="col-4 d-flex flex-column align-items-center justify-content-evenly">
-						<div>第一檢測區良率 XXX %</div>
-						<div>第二檢測區良率 XXX %</div>
-						<div>第三檢測區良率 XXX %</div>
-						<div>第四檢測區良率 XXX %</div>
-						<div>第五檢測區良率 XXX %</div>
-						<div>第六檢測區良率 XXX %</div>
+				  <div class="col-4 d-flex flex-column justify-content-evenly statistics-data">
+					<div class="row">
+						<div class="col-6 d-flex align-items-center">
+							<div class="fs-5">Volume (OK/NG):</div>
+						</div>
+						<div class="col-6 d-flex justify-content-center">
+							<span class="ok-count mx-1 fs-3" id="ok-vol">0</span>
+							<span class="mx-1 fs-3">/</span>
+							<span class="ng-count mx-1 fs-3" id="ng-vol">0</span>
+						</div>
 					</div>
+					<div class="row">
+						<div class="col-6 d-flex align-items-center">
+							<div class="fs-5">Inference Time:</div>
+						</div>
+						<div class="col-6 d-flex justify-content-center">
+							<span class="mx-1 fs-3" id="inference-time">0</span>
+							<span class="mx-2 fs-5 align-self-end" id="inference-time">ms</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6 d-flex align-items-center">
+							<div class="fs-5">UPH:</div>
+						</div>
+						<div class="col-6 d-flex justify-content-center">
+							<span class="mx-1 fs-3" id="uph">100</span>
+						</div>
+					</div>
+				  </div>
+				  <div class="col-3 d-flex">
+					<div class="yield-data d-flex flex-column align-items-center justify-content-evenly flex-fill">
+						<div class="fs-5">第一檢測區良率 <span id="area1-yield">30.03</span> %</div>
+						<div class="fs-5 text-muted">第二檢測區良率 XXX %</div>
+						<div class="fs-5 text-muted">第三檢測區良率 XXX %</div>
+						<div class="fs-5 text-muted">第四檢測區良率 XXX %</div>
+						<div class="fs-5 text-muted">第五檢測區良率 XXX %</div>
+						<div class="fs-5 text-muted">第六檢測區良率 XXX %</div>
+					</div>					
+				  </div>
 			  </div>
 		  </div>
 		</div>

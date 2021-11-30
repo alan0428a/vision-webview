@@ -28,4 +28,22 @@
   {
     border: dashed red;
   }
+
+  .ok-count{
+    color: green;
+  }
+
+  .ng-count{
+    color: red;
+  }
+
+  .statistics-data{
+    background-color: rgba(187, 222, 251, 0.5);
+    border-radius: 20px;
+  }
+
+  .yield-data{
+    background-color: rgba(220, 237, 200, 0.5);
+    border-radius: 20px;
+  }
   
