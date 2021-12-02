@@ -1,5 +1,5 @@
 .main-content{
-    height: 700px;
+    height: 800px;
     width: 1200px; 
   }
 
@@ -38,12 +38,17 @@
   }
 
   .statistics-data{
-    background-color: rgba(187, 222, 251, 0.5);
+    background-color: rgba(0, 75, 135, 0.3);
     border-radius: 20px;
   }
 
   .yield-data{
-    background-color: rgba(220, 237, 200, 0.5);
+    background-color: rgba(241, 180, 52, 0.3);
     border-radius: 20px;
+  }
+
+  #logo{
+    max-width: 200px;
+    max-height: auto;
   }
   
