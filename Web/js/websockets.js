@@ -33,7 +33,7 @@ function connect(){
 					var imgResult = data.imageResults[0]
 					setImage('#img-source', imgResult.image)
 					setBoarder('#img-wrapper-source', imgResult.pass)
-					$('#inference-time').html(data.ct.toFixed(2))
+					$('#inference-time').html(data.ct.toFixed(0))
 					$('#uph').html(data.uph.toFixed(0))
 
 					if(prevTime == null)
